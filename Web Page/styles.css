@@ -1,0 +1,303 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+.main-content {
+    flex: 1; /* Pushes footer to the bottom */
+}
+#file-name {
+    color: #ffeb3b;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.light-mode {
+    background: linear-gradient(to right, #f7f7f7, #d4d4d4); /* Softer light background */
+    color: black;
+}
+
+.light-mode .navbar {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Styles */
+/* Default Navbar Title (Dark Mode) */
+.navbar-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin-left: 20px;
+}
+
+/* Change Navbar Title in Light Mode */
+.light-mode .navbar-title {
+    color: black; /* Change to black in light mode */
+}
+
+.navbar {
+    width: 100%;
+    height: 60px; /* Reduced height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.3); /* Transparent glass effect */
+    backdrop-filter: blur(10px); /* Glass effect */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s ease;
+}
+.light-mode .navbar {
+    background: rgba(255, 255, 255, 0.9);  /* Lighter background */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+    margin-left: auto; /* Push links to the right */
+    margin-right: 20px;
+}
+.light-mode .nav-links a {
+    color: black;  /* Change text to black */
+}
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffeb3b; /* Yellow hover effect */
+}
+/* Theme Toggle Button */
+#theme-toggle {
+    margin-left: 15px;
+    padding: 8px 12px;
+    border: none;
+    background: #ffeb3b;
+    color: #333;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background: #ffd700;
+}
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Upload Container */
+#upload-container {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Hide Default File Input */
+#image-upload {
+    display: none;
+}
+
+/* Custom File Upload Button */
+.custom-upload-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background: #ffeb3b;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.custom-upload-button:hover {
+    background: #ffd700;
+    transform: scale(1.05);
+}
+.light-mode .custom-upload-button {
+    background: #007bff; /* Blue button in light mode */
+    color: white;
+}
+.light-mode .custom-upload-button:hover {
+    background: #0056b3;
+}
+/* Image Container */
+#image-container {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.light-mode #image-container {
+    background: rgba(0, 0, 0, 0.1);
+}
+/* Image Display Box */
+#image-container div {
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image & Canvas Styling */
+#original-image, #dehazed-image {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: transform 0.3s ease;
+}
+
+#original-image:hover, #dehazed-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Loading Indicator */
+#loading-indicator {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffeb3b;
+    animation: blink 1.5s infinite;
+}
+.light-mode #loading-indicator {
+    color: #ff5733;
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Footer */
+/* footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    bottom: 0;
+    color: white;
+} */
+footer {
+    width: 100%;
+    /* background: rgba(175, 170, 170, 0.8); */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative; /* Sticks to bottom when content is short */
+    bottom: 0;
+}
+
+
+
+
+/* About Page CSS */
+/* About Page Styling */
+.about-container {
+    max-width: 800px;
+    margin: 100px auto 50px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Headings */
+.about-container h2, .about-container h3 {
+    color: #ffeb3b;
+}
+
+/* Paragraphs */
+.about-container p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* List */
+.about-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-container ul li {
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}

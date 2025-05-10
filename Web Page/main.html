@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Dehazer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</head>
+<body>
+    <div class="main-content">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1 class="navbar-title">Image Dehazer</h1>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <button id="theme-toggle">🌙</button>
+    </nav>
+    
+
+    <!-- Upload Container -->
+    <div id="upload-container">
+        <label for="image-upload" class="custom-upload-button">📷 Choose an Image</label>
+        <input type="file" id="image-upload" accept="image/*">
+        <p id="file-name"></p>
+    </div>
+    
+
+    <!-- Image Display -->
+    <div id="image-container">
+        <div>
+            <p>Original Image</p>
+            <img id="original-image" src="" alt="Original Image">
+        </div>
+        <div>
+            <p>Dehazed Image</p>
+            <canvas id="dehazed-image" width="400" height="400"></canvas>
+        </div>
+    </div>
+
+    <div id="loading-indicator">Processing...</div>
+    <footer>
+        <p>© 2025 Image Dehazer | Made by G8</p>
+    </footer>
+</div>
+</body>
+</html>
