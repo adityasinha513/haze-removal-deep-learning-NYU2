@@ -8,7 +8,7 @@ This project includes a fully functional web application built using Flask, HTML
 - Upload images from your device
 - View input and output side-by-side
 - Supports real-time inference
-| ![Web-Page-Preview](https://raw.githubusercontent.com/adityasinha513/haze-removal-deep-learning-NYU2/main/Web%20Page/Web-page-preview.png) |
+ ![Web-Page-Preview](https://raw.githubusercontent.com/adityasinha513/haze-removal-deep-learning-NYU2/main/Web%20Page/Web-page-preview.png) 
 
 ## ✨ Features
 
