@@ -19,9 +19,10 @@ A deep learning-based system for removing haze from single images and video stre
   
 ## 📷 Sample Results
 
-| Hazy Input | Dehazed Output |
-|------------|----------------|
-| ![input](outputs/in/0.jpg) | ![clean](outputs/in/0_clean.jpg) | ![clean](outputs/in/0_dehaze.jpg) |
+| Hazy Input | Ground Truth | Dehazed Output |
+|------------|--------------|----------------|
+| ![input](outputs/in/0.jpg) | ![gt](outputs/in/0_clean.jpg) | ![output](outputs/in/0_dehaze.jpg) |
+
 
 ## 📦 Installation
 
