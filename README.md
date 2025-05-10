@@ -2,7 +2,7 @@
 
 A deep learning-based system for removing haze from single images and video streams using a Residual CNN and transmission estimation network. Trained on NYU-Depth V2 and RESIDE datasets.
 
-##🌐 Web Interface
+## 🌐 Web Interface
 This project includes a fully functional web application built using Flask, HTML/CSS, and JavaScript, allowing users to upload hazy images and receive clear, dehazed outputs in real time.
 
 -Upload images directly from your device
