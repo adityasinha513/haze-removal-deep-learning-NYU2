@@ -1,1 +1,13 @@
-Hello
+---
+
+## ✅ 4. **requirements.txt** 
+
+```txt
+tensorflow==2.14.0
+keras==2.14.0
+opencv-python
+numpy
+matplotlib
+h5py
+scikit-image
+flask
