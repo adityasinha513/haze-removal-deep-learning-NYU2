@@ -21,7 +21,8 @@ A deep learning-based system for removing haze from single images and video stre
 
 | Hazy Input | Ground Truth | Dehazed Output |
 |------------|--------------|----------------|
-| ![input](outputs/in/0.jpg) | ![gt](outputs/in/0_clean.jpg) | ![output](outputs/in/0_dehaze.jpg) |
+| ![input](https://raw.githubusercontent.com/adityasinha513/haze-removal-deep-learning-NYU2/main/Outputs/in/0.jpg) | ![gt](https://raw.githubusercontent.com/adityasinha513/haze-removal-deep-learning-NYU2/main/Outputs/in/0_clean.jpg) | ![dehaze](https://raw.githubusercontent.com/adityasinha513/haze-removal-deep-learning-NYU2/main/Outputs/in/0_dehaze.jpg) |
+
 
 
 ## 📦 Installation
